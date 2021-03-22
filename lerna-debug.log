@@ -1,0 +1,101 @@
+0 silly argv {
+0 silly argv   _: [ 'publish' ],
+0 silly argv   composed: 'publish',
+0 silly argv   lernaVersion: '3.22.1',
+0 silly argv   '$0': '/Users/corey.bruyere/Sites/haiku/node_modules/.bin/lerna'
+0 silly argv }
+1 notice cli v3.22.1
+2 verbose rootPath /Users/corey.bruyere/Sites/haiku
+3 verbose session 9c168b10734594a2
+4 verbose user-agent lerna/3.22.1/node@v12.13.0+x64 (darwin)
+5 silly argv { _: [ 'publish' ], composed: 'publish', lernaVersion: '3.22.1' }
+6 verbose rootPath /Users/corey.bruyere/Sites/haiku
+7 info current version 2.1.0
+8 silly isAnythingCommitted
+9 verbose isAnythingCommitted 1
+10 silly currentBranch
+11 verbose currentBranch feature/HAIKU-223_ExportDataTable
+12 silly remoteBranchExists
+13 silly isBehindUpstream
+14 silly isBehindUpstream feature/HAIKU-223_ExportDataTable is behind origin/feature/HAIKU-223_ExportDataTable by 0 commit(s) and ahead by 0
+15 silly hasTags
+16 verbose hasTags true
+17 silly git-describe.sync "e064a4f" => {"refCount":"671","sha":"e064a4f","isDirty":false}
+18 info Assuming all packages changed
+19 verbose updated @hart/haiku-core
+20 verbose updated @hart/haiku-icons
+21 verbose git-describe undefined => "e064a4f"
+22 silly git-describe parsed => {"refCount":"671","sha":"e064a4f","isDirty":false}
+23 info execute Skipping releases
+24 silly lifecycle No script for "preversion" in "haiku", continuing
+25 silly lifecycle No script for "preversion" in "@hart/haiku-icons", continuing
+26 silly lifecycle No script for "version" in "@hart/haiku-icons", continuing
+27 silly lifecycle No script for "preversion" in "@hart/haiku-core", continuing
+28 silly lifecycle No script for "version" in "@hart/haiku-core", continuing
+29 silly lifecycle No script for "version" in "haiku", continuing
+30 silly gitAdd [
+30 silly gitAdd   'packages/icons/package.json',
+30 silly gitAdd   'packages/icons/package-lock.json',
+30 silly gitAdd   'packages/core/package.json',
+30 silly gitAdd   'packages/core/package-lock.json',
+30 silly gitAdd   'lerna.json'
+30 silly gitAdd ]
+31 silly gitCommit v2.1.1-alpha.0
+32 verbose git [ 'commit', '-m', 'v2.1.1-alpha.0' ]
+33 silly gitTag v2.1.1-alpha.0
+34 verbose git [ 'tag', 'v2.1.1-alpha.0', '-m', 'v2.1.1-alpha.0' ]
+35 silly lifecycle No script for "postversion" in "@hart/haiku-core", continuing
+36 silly lifecycle No script for "postversion" in "@hart/haiku-icons", continuing
+37 silly lifecycle No script for "postversion" in "haiku", continuing
+38 info git Pushing tags...
+39 silly gitPush origin feature/HAIKU-223_ExportDataTable
+40 info publish Publishing packages to npm...
+41 info Verifying npm credentials
+42 verbose Retrieving npm user profile
+43 http fetch GET 200 https://registry.npmjs.org/-/npm/v1/user 440ms
+44 silly npm profile get received {"tfa":false,"name":"coreybruyere","email":"hello@coreybruyere.com","email_verified":true,"created":"2018-06-06T17:28:29.610Z","updated":"2020-10-18T05:25:22.705Z","cidr_whitelist":null,"fullname":"Corey Bruyere"}
+45 silly get npm username received {"username":"coreybruyere","tfa":false,"name":"coreybruyere","email":"hello@coreybruyere.com","email_verified":true,"created":"2018-06-06T17:28:29.610Z","updated":"2020-10-18T05:25:22.705Z","cidr_whitelist":null,"fullname":"Corey Bruyere"}
+46 silly verifyNpmPackageAccess
+47 http fetch GET 200 https://registry.npmjs.org/-/org/coreybruyere/package?format=cli 170ms
+48 info Checking two-factor auth mode
+49 verbose Retrieving npm user profile
+50 http fetch GET 200 https://registry.npmjs.org/-/npm/v1/user 151ms
+51 silly npm profile get received {"tfa":false,"name":"coreybruyere","email":"hello@coreybruyere.com","email_verified":true,"created":"2018-06-06T17:28:29.610Z","updated":"2020-10-18T05:25:22.705Z","cidr_whitelist":null,"fullname":"Corey Bruyere"}
+52 silly 2FA false
+53 warn ENOLICENSE Package @hart/haiku-core is missing a license.
+53 warn ENOLICENSE One way to fix this is to add a LICENSE.md file to the root of this repository.
+53 warn ENOLICENSE See https://choosealicense.com for additional guidance.
+54 silly getCurrentSHA
+55 verbose getCurrentSHA 9d78efa99250ebb2536ae1635385dbfa2ebe7d28
+56 warn lifecycle Skipping root "prepublish" because it has already been called
+57 silly lifecycle No script for "prepare" in "haiku", continuing
+58 silly lifecycle No script for "prepublishOnly" in "haiku", continuing
+59 silly lifecycle No script for "prepack" in "haiku", continuing
+60 verbose pack-directory packages/icons
+61 silly lifecycle No script for "prepublish" in "@hart/haiku-icons", continuing
+62 silly lifecycle No script for "prepare" in "@hart/haiku-icons", continuing
+63 silly lifecycle No script for "prepublishOnly" in "@hart/haiku-icons", continuing
+64 silly lifecycle No script for "prepack" in "@hart/haiku-icons", continuing
+65 silly lifecycle No script for "postpack" in "@hart/haiku-icons", continuing
+66 verbose packed packages/icons
+67 verbose pack-directory packages/core
+68 silly lifecycle No script for "prepublish" in "@hart/haiku-core", continuing
+69 silly lifecycle No script for "prepare" in "@hart/haiku-core", continuing
+70 silly lifecycle No script for "prepublishOnly" in "@hart/haiku-core", continuing
+71 silly lifecycle No script for "prepack" in "@hart/haiku-core", continuing
+72 error ZlibError: zlib: invalid block type
+72 error     at Unzip.<anonymous> (/Users/corey.bruyere/Sites/haiku/node_modules/@lerna/get-packed/node_modules/minizlib/index.js:73:52)
+72 error     at Unzip.emit (events.js:215:7)
+72 error     at Zlib.zlibOnError [as onerror] (zlib.js:173:8)
+72 error     at processChunkSync (zlib.js:416:12)
+72 error     at Unzip.ZlibBase._processChunk (zlib.js:391:12)
+72 error     at Unzip.write (/Users/corey.bruyere/Sites/haiku/node_modules/@lerna/get-packed/node_modules/minizlib/index.js:140:30)
+72 error     at Object.write (/Users/corey.bruyere/Sites/haiku/node_modules/@lerna/get-packed/node_modules/tar/lib/parse.js:305:58)
+72 error     at Yallist.<anonymous> (/Users/corey.bruyere/Sites/haiku/node_modules/@lerna/get-packed/node_modules/minipass/index.js:374:18)
+72 error     at Yallist.forEach (/Users/corey.bruyere/Sites/haiku/node_modules/@lerna/get-packed/node_modules/yallist/yallist.js:156:8)
+72 error     at ReadStream.emit (/Users/corey.bruyere/Sites/haiku/node_modules/@lerna/get-packed/node_modules/minipass/index.js:373:20)
+72 error     at ReadStream.emit (/Users/corey.bruyere/Sites/haiku/node_modules/@lerna/get-packed/node_modules/fs-minipass/index.js:154:22)
+72 error     at ReadStream.write (/Users/corey.bruyere/Sites/haiku/node_modules/@lerna/get-packed/node_modules/minipass/index.js:163:17)
+72 error     at ReadStream.[_handleChunk] (/Users/corey.bruyere/Sites/haiku/node_modules/@lerna/get-packed/node_modules/fs-minipass/index.js:131:19)
+72 error     at ReadStream.[_onread] (/Users/corey.bruyere/Sites/haiku/node_modules/@lerna/get-packed/node_modules/fs-minipass/index.js:109:32)
+72 error     at /Users/corey.bruyere/Sites/haiku/node_modules/@lerna/get-packed/node_modules/fs-minipass/index.js:101:22

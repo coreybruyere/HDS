@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "es5",
+    "declaration": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "skipLibCheck": true
+  },
+  "include": ["packages/core/**/*.ts", "packages/core/**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,22 @@
+import { Meta, Story, Props, Preview, Subtitle } from '@storybook/addon-docs/blocks';
+import { Box } from '../src';
+
+<Meta title="Packages/Box" component={Box}></Meta>
+
+# Box
+
+<Subtitle>The Box component is the root of all components.</Subtitle>
+
+### Basic usage
+
+This is a `<Box>` with no props or attributes passed to it.
+
+<Preview withToolbar withSource="open">
+  <Story name="Basic">
+    <Box>Responsive box-model layout component.</Box>
+  </Story>
+</Preview>
+
+### Component Props
+
+<Props of={Box} />

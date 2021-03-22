@@ -1,0 +1,68 @@
+import { Meta, Props, Preview, Story, Source, Subtitle } from '@storybook/addon-docs/blocks';
+
+import { Box, useTheme } from '../src';
+
+<Meta title="Design/Theme Spec"></Meta>
+
+<Preview withToolbar>
+  <Story name="Colors">
+    {() => {
+      const theme = useTheme();
+      const { colors } = theme;
+      const topLevelColors = Object.keys(colors!).filter((color) => typeof colors![color] === "string");
+      const topColorsSection = (
+        <>
+          <Box>Aliases</Box>
+          {topLevelColors.map((color, idx) => (
+            <Box mb={1} key={`${color}-${idx}`} {...rest}>
+              <Box
+                sx={{
+                  width: 24,
+                  height: 24,
+                  bg: colors![color],
+                  borderWidth: "1px",
+                  borderColor: "gray",
+                  borderStyle: "solid"
+                }}
+              />
+              <Box>{colors![color]}</Box>
+            </Box>
+          ))}
+        </>
+      );
+      const subColorsSection = Object.keys(colors!).map(
+        (label, idx) =>
+          typeof colors![label] === "object" && (
+            <Box key={`${label}-${idx}`}>
+              {label && <Box>{label}</Box>}
+              {Object.values(colors![label]!).map((subColor, idx) => {
+                let hex = subColor;
+                return (
+                  <Box key={`${hex}-${idx}`} {...rest}>
+                    <Box
+                      sx={{
+                        mb: 1,
+                        width: 24,
+                        height: 24,
+                        bg: hex,
+                        borderWidth: "1px",
+                        borderColor: "gray",
+                        borderStyle: "solid"
+                      }}
+                    />
+                    <Box>{hex}</Box>
+                  </Box>
+                );
+              })}
+            </Box>
+          )
+      );
+      return (
+        <>
+          {topColorsSection}
+          {subColorsSection}
+        </>
+      );
+    }};
+  </Story>
+</Preview>
